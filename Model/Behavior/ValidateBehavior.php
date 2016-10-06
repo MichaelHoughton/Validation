@@ -30,4 +30,14 @@ class ValidateBehavior extends ModelBehavior {
 
     	return false;
     }
+
+/**
+ * An alias for notBlank
+ * @param  object $Model
+ * @param  array  $data
+ * @return bool
+ */
+    public function notEmpty($Model, $data) {
+        return Validation::notBlank($Model, $data);
+    }
 }
